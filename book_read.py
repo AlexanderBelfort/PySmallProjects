@@ -22,13 +22,16 @@ pages = pdfReader.numPages
 #print(pages)
 #test passed
 
+#create a loop to start from page 33 > end
 
-#start from page 33
-page = pdfReader.getPage(33)
+for num in range(33, pages):
+    
+    #start from page 33
+    page = pdfReader.getPage(num)
 
-#extract the information off page 32
-text = page.extractText()
+    #extract the information off page 32
+    text = page.extractText()
 
-speaker.say(text)
-#make it talk
-speaker.runAndWait()
+    speaker.say(text)
+    #make it talk
+    speaker.runAndWait()
